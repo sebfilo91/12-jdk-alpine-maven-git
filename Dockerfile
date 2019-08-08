@@ -7,8 +7,8 @@ ENV MAVEN_HOME=/usr/share/maven
 RUN apk --no-cache add ca-certificates openssl git &&  update-ca-certificates
 
 RUN cd /tmp \
-   && wget https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz \
-   && wget https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz.sha1 \
+   && wget https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz --no-check-certificate \
+   && wget https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz.sha1 --no-check-certificate \
    && echo -e "$(cat apache-maven-3.6.0-bin.tar.gz.sha1)  apache-maven-3.6.0-bin.tar.gz" | sha1sum -c - \
    && tar zxf apache-maven-3.6.0-bin.tar.gz \
    && rm -rf apache-maven-3.6.0-bin.tar.gz \
