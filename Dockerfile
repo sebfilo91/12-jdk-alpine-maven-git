@@ -3,8 +3,8 @@ FROM openjdk:13-jdk-alpine
 MAINTAINER Sebastien Phillot <sebastien.phillot@gmail.com>
 
 ENV MAVEN_HOME=/usr/share/maven
-ENV HELM_VERSION="v2.14.2"
-ENV KUBE_LATEST_VERSION="v1.15.0"
+ENV HELM_VERSION="v2.13.1"
+ENV KUBE_LATEST_VERSION="v1.14.3"
 
 RUN apk --no-cache add ca-certificates openssh openssl git curl bash &&  update-ca-certificates
 
