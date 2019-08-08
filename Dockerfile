@@ -13,7 +13,7 @@ RUN cd /tmp \
    && tar zxf apache-maven-3.6.0-bin.tar.gz \
    && rm -rf apache-maven-3.6.0-bin.tar.gz \
    && mv ./apache-maven-3.6.0 /usr/share/maven \
-   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn \
    && wget -q https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERSION}/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl \
    && chmod +x /usr/local/bin/kubectl \
    && wget -q https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm \
