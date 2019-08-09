@@ -19,7 +19,7 @@ RUN cd /tmp \
    && wget -q https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm \
    && chmod +x /usr/local/bin/helm
 
-RUN addgroup -S jenkins && adduser -S jenkins -G jenkins
+RUN addgroup -S jenkins -g 1000 && adduser -S jenkins -u 1000 -G jenkins
 RUN chmod -R a+rwx /home/jenkins
 RUN chown -R 1000:1000 /home/jenkins
 
