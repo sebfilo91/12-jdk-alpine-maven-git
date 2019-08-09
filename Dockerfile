@@ -23,7 +23,5 @@ RUN addgroup -S jenkins && adduser -S jenkins -G jenkins
 RUN chmod -R a+rwx /home/jenkins
 RUN chown -R 1000:1000 /home/jenkins
 
-WORKDIR /home/jenkins
-
 USER jenkins
 
