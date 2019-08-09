@@ -20,7 +20,7 @@ RUN cd /tmp \
    && chmod +x /usr/local/bin/helm
 
 RUN addgroup -S jenkins && adduser -S jenkins -G jenkins
-RUN mkdir /home/jenkins && chmod a+rwx /home/jenkins
+RUN chmod a+rwx /home/jenkins
 
 WORKDIR /home/jenkins
 
