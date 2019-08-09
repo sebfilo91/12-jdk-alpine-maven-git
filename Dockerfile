@@ -6,7 +6,7 @@ ENV MAVEN_HOME=/usr/share/maven
 ENV HELM_VERSION="v2.13.1"
 ENV KUBE_LATEST_VERSION="v1.14.3"
 
-RUN apk --no-cache add ca-certificates openssh openssl git curl bash &&  update-ca-certificates
+RUN apk --no-cache add ca-certificates openssh openssh-client openssl git curl bash &&  update-ca-certificates
 
 RUN cd /tmp \
    && wget https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz --no-check-certificate \
